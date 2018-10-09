@@ -1,0 +1,5 @@
+1-t0.300-to0.05-y2003-m11-p90-signed.g.g GRASP = 335 Tempo = 3601.53
+1-t0.300-to0.05-y2003-m11-p90-signed.g.g GRASP = 336 Tempo = 1550.25
+1-t0.300-to0.05-y2003-m11-p90-signed.g.g GRASP = 336 Tempo = 1314.4
+1-t0.300-to0.05-y2003-m11-p90-signed.g.g GRASP = 337 Tempo = 2359.44
+1-t0.300-to0.05-y2003-m11-p90-signed.g.g GRASP = 336 Tempo = 1722.64
