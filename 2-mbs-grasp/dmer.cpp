@@ -66,11 +66,13 @@ void Dmer::le_dados_grasp(int MaxIter, int MaxTime)
 
   /* Grasp */
   std::ofstream myfile ("saida.txt");
-  t_ini2  = (unsigned long int) clock();
-  jj = sg.grasp_sig_v2(sg.vet1, f, sg.vet2, f2, sg.vet3, f3, sg.vet4, f4, f5, f6, MaxIter, MaxTime, TEST);
-  std::cout<<std::endl<<nome<<" GRASP = "<<jj<<" Tempo = "<<calcula_tempo(t_ini2, (unsigned long int) clock())<<std::endl;
+  for (int i=0;i<9;i++){
+    t_ini2  = (unsigned long int) clock();
+    jj = sg.grasp_sig_v2(sg.vet1, f, sg.vet2, f2, sg.vet3, f3, sg.vet4, f4, f5, f6, MaxIter, MaxTime, TEST);
+    std::cout<<std::endl<<nome<<" GRASP = "<<jj<<" Tempo = "<<calcula_tempo(t_ini2, (unsigned long int) clock())<<std::endl;
 
-  myfile<<nome<<" GRASP = "<<jj<<" Tempo = "<< calcula_tempo(t_ini2, (unsigned long int) clock())<<std::endl;
+    //myfile<<nome<<" GRASP = "<<jj<<" Tempo = "<< calcula_tempo(t_ini2, (unsigned long int) clock())<<std::endl;
+  }
   myfile.close();
 
   /* desaloca */
