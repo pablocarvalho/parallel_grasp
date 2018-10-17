@@ -82,8 +82,8 @@ public:
   int  obj_grasp_sig_v2(Array<int> &A, Array<int> &B);
   double calcula_tempo(const unsigned long int ini, const unsigned long int fim);
   int  grasp_sig_v2(Array<int> &A, Array<int> &a, Array<int> &B, Array<int> &b, Array<int> &C, Array<int> &c, Array<int> &cand1, Array<int> &cand2, Array<int> &b_A, Array<int> &b_B, int ITMAX, int TIMEMAX, int TEST);
-  static void* busca_local(void* args);
-
+  void* busca_local(void* args);
+  
   /* ------- TAD ------ */
   void write_sol(const char * name, Array<int> &A, Array<int> &B);
 

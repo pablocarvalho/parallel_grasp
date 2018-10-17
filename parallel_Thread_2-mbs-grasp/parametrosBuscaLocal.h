@@ -20,16 +20,16 @@ public:
 
 	ParametrosBuscaLocal(Array<int> &A, Array<int> &a, Array<int> &B, Array<int> &b, Array<int> &C, Array<int> &c, Array<int> &cand1, Array<int> &cand2, Array<int> &b_A, Array<int> &b_B, int ITMAX, int TIMEMAX, int TEST,int* sol)
 	{
-		this->A = *A;
-		this->a = *a;
-		this->B = *B;
-		this->b = *b;
-		this->C = *C;
-		this->c = *c;
-		this->cand1 = *cand1;
-		this->cand2 = *cand2;
-		this->b_A = *b_A;
-		this->b_B = *b_B;
+		this->A = Array<int>(A);
+		this->a = Array<int>(a);
+		this->B = Array<int>(B);
+		this->b = Array<int>(b);
+		this->C = Array<int>(C);
+		this->c = Array<int>(c);
+		this->cand1 = Array<int>(cand1);
+		this->cand2 = Array<int>(cand2);
+		this->b_A = Array<int>(b_A);
+		this->b_B = Array<int>(b_B);
 		this->ITMAX = ITMAX; 
 		this->TIMEMAX = TIMEMAX; 
 		this->TEST = TEST;

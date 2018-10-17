@@ -1483,19 +1483,24 @@ double Sigraph::calcula_tempo(const unsigned long int ini, const unsigned long i
 }
 
 void* Sigraph::busca_local(void* args)
-{      			
-		ParametrosBuscaLocal* parametros = dynamic_cast<ParametrosBuscaLocal*>(args);
+{
+	/* PARAMETROS */
+	  int          DEPU=0;
+		unsigned long int t_ini_g;
+		int vez;
+		bool         moveu, viz_A, viz_B, viz_AB;      			
+		ParametrosBuscaLocal* parametros = (ParametrosBuscaLocal*)(args);
 
-		Array<int> A = parametros->A;
-		Array<int> a = parametros->a; 
-		Array<int> B = parametros->B; 
-		Array<int> b = parametros->b; 
-		Array<int> C = parametros->C; 
-		Array<int> c = parametros->c; 
-		Array<int> cand1 = parametros->cand1;
-		Array<int> cand2 = parametros->cand2; 
-		Array<int> b_A = parametros->b_A;
-		Array<int> b_B = parametros->b_B; 
+		Array<int>& A = parametros->A;
+		Array<int>& a = parametros->a; 
+		Array<int>& B = parametros->B; 
+		Array<int>& b = parametros->b; 
+		Array<int>& C = parametros->C; 
+		Array<int>& c = parametros->c; 
+		Array<int>& cand1 = parametros->cand1;
+		Array<int>& cand2 = parametros->cand2; 
+		Array<int>& b_A = parametros->b_A;
+		Array<int>& b_B = parametros->b_B; 
 		int ITMAX = parametros->ITMAX;
 		int TIMEMAX = parametros->TIMEMAX;
 		int TEST = parametros->TEST;
@@ -1617,7 +1622,7 @@ void* Sigraph::busca_local(void* args)
 
 	      	if (moveu)
 		    {
-		      sol = obj_grasp_sig_v2(A, B);
+		      *sol = obj_grasp_sig_v2(A, B);
 		      if (TEST) testa_particoes_grasp_sig_v2(A, a, B, b, C, c);
 		    }
 
@@ -1629,7 +1634,7 @@ void* Sigraph::busca_local(void* args)
 		
       	if (moveu)
 		{
-	  		sol = obj_grasp_sig_v2(A, B);
+	  		*sol = obj_grasp_sig_v2(A, B);
 	  		if (TEST) testa_particoes_grasp_sig_v2(A, a, B, b, C, c);
 		}
 
@@ -1648,7 +1653,10 @@ pthread_t thds[NUMTHRDS];
 
 int Sigraph::grasp_sig_v2(Array<int> &A, Array<int> &a, Array<int> &B, Array<int> &b, Array<int> &C, Array<int> &c, Array<int> &cand1, Array<int> &cand2, Array<int> &b_A, Array<int> &b_B, int ITMAX, int TIMEMAX, int TEST)
 {
-	  int          sol,b_sol=-1, vez, ii,solT0,solT1;
+	  int          sol,b_sol=-1, vez, ii;
+		
+		int* solT0;
+		int* solT1;
 
 	  bool         moveu, viz_A, viz_B, viz_AB;
 	  //bool leftTerminate = false;
@@ -1702,13 +1710,13 @@ int Sigraph::grasp_sig_v2(Array<int> &A, Array<int> &a, Array<int> &B, Array<int
       	pthread_create(&thds[1], NULL, busca_local, (void*)&pbl1);
       	pthread_join(thds[0], (void **)&status);
       	pthread_join(thds[1], (void **)&status);
-      	if (solT0>solT1)
+      	if (*solT0> *solT1)
       	{
-      		sol=solT0;
+      		sol=*solT0;
       	}
       	else
       	{
-      		sol=solT1;
+      		sol=*solT1;
       	}
       	//Sigraph::busca_local(A, a, B, b, C, c, cand1, cand2, b_A, b_B,  ITMAX,  TIMEMAX,  TEST, solT1);
 		//------------------ final paralelização thread -------------------------
