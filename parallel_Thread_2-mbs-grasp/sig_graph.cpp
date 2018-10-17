@@ -1,7 +1,6 @@
 #include <mpi.h>
 #include "sig_graph.h"
-#include <pthread.h> 
-//#include "parametrosBuscaLocal.h"
+#include "parametrosBuscaLocal.h"
 
 
 // gera grafo a partir de um arquivo .G
@@ -382,8 +381,10 @@ int Sigraph::grasp_sig_v2(Array<int> &A, Array<int> &a, Array<int> &B, Array<int
 {
 	  int          sol,b_sol=-1, vez, ii;
 		
-		int* solT0;
-		int* solT1;
+		int* solT0 = new int;
+    *solT0 = 0;
+		int* solT1 = new int;
+    *solT1 = 0;
 
 	  bool         moveu, viz_A, viz_B, viz_AB;
 	  //bool leftTerminate = false;
@@ -431,20 +432,24 @@ int Sigraph::grasp_sig_v2(Array<int> &A, Array<int> &a, Array<int> &B, Array<int
       	sol = metodo_construtivo_grasp_sig_v2(A, a, B, b, C, c, cand1, cand2, TEST);
       	if (DEPU) std::cout<<std::endl<<"IT = "<<it<<") solucao inicial com "<<sol<<" vertices"<<std::endl;
       	//--------------------inicio threads--------------------------
-      	// ParametrosBuscaLocal pbl0(A, a, B, b, C, c, cand1, cand2, b_A, b_B,  ITMAX,  TIMEMAX,  TEST, solT0);
-      	// ParametrosBuscaLocal pbl1(A, a, B, b, C, c, cand1, cand2, b_A, b_B,  ITMAX,  TIMEMAX,  TEST, solT1);
-      	// pthread_create(&thds[0], NULL, busca_local, (void*)&pbl0);
-      	// pthread_create(&thds[1], NULL, busca_local, (void*)&pbl1);
-      	// pthread_join(thds[0], (void **)&status);
-      	// pthread_join(thds[1], (void **)&status);
-      	// if (*solT0> *solT1)
-      	// {
-      	// 	sol=*solT0;
-      	// }
-      	// else
-      	// {
-      	// 	sol=*solT1;
-      	// }
+      	 
+
+         ParametrosBuscaLocal pbl0(A, a, B, b, C, c, cand1, cand2, b_A, b_B,  ITMAX,  TIMEMAX,  TEST, solT0, g,stat,n);
+      	 ParametrosBuscaLocal pbl1(A, a, B, b, C, c, cand1, cand2, b_A, b_B,  ITMAX,  TIMEMAX,  TEST, solT1, g,stat,n);
+         pbl0.StartInternalThread();
+         pbl1.StartInternalThread();
+
+         pbl0.WaitForInternalThreadToExit();
+         pbl1.WaitForInternalThreadToExit();
+
+         if (*solT0> *solT1)
+      	 {
+      	 	sol=*solT0;
+      	 }
+      	 else
+      	 {
+      	 	sol=*solT1;
+      	 }
       	//Sigraph::busca_local(A, a, B, b, C, c, cand1, cand2, b_A, b_B,  ITMAX,  TIMEMAX,  TEST, solT1);
 		//------------------ final paralelização thread -------------------------
 		      

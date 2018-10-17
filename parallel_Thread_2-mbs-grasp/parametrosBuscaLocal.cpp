@@ -1,28 +1,28 @@
 #include "parametrosBuscaLocal.h"
 
-void* ParametrosBuscaLocal::busca_local(void* args)
+void ParametrosBuscaLocal::busca_local()
 {
 	/* PARAMETROS */
 	  int          DEPU=0;
 		unsigned long int t_ini_g;
 		int vez;
 		bool         moveu, viz_A, viz_B, viz_AB;      			
-		ParametrosBuscaLocal* parametros = (ParametrosBuscaLocal*)(args);
+		//ParametrosBuscaLocal* parametros = (ParametrosBuscaLocal*)(args);
 
-		Array<int>& A = parametros->A;
-		Array<int>& a = parametros->a; 
-		Array<int>& B = parametros->B; 
-		Array<int>& b = parametros->b; 
-		Array<int>& C = parametros->C; 
-		Array<int>& c = parametros->c; 
-		Array<int>& cand1 = parametros->cand1;
-		Array<int>& cand2 = parametros->cand2; 
-		Array<int>& b_A = parametros->b_A;
-		Array<int>& b_B = parametros->b_B; 
-		int ITMAX = parametros->ITMAX;
-		int TIMEMAX = parametros->TIMEMAX;
-		int TEST = parametros->TEST;
-		int* sol = parametros->sol;
+		// Array<int>& A = parametros->A;
+		// Array<int>& a = parametros->a; 
+		// Array<int>& B = parametros->B; 
+		// Array<int>& b = parametros->b; 
+		// Array<int>& C = parametros->C; 
+		// Array<int>& c = parametros->c; 
+		// Array<int>& cand1 = parametros->cand1;
+		// Array<int>& cand2 = parametros->cand2; 
+		// Array<int>& b_A = parametros->b_A;
+		// Array<int>& b_B = parametros->b_B; 
+		// int ITMAX = parametros->ITMAX;
+		// int TIMEMAX = parametros->TIMEMAX;
+		// int TEST = parametros->TEST;
+		// int* sol = parametros->sol;
 
       	moveu = true;
       	while (moveu)
@@ -809,13 +809,6 @@ bool ParametrosBuscaLocal::move_3_C_AB_v2(int desceu1, int desceu2, int origem1,
   return moveu;
 }
 
-
-
-
-
-
-
-
 /* vizinhanca do GRASP para o problema do grafo de sinais -> desce um de A e sobem 2 para A ou B */
 int ParametrosBuscaLocal::viz_down_A_v2(Array<int> &A, Array<int> &a, Array<int> &B, Array<int> &b, Array<int> &C, Array<int> &c, Array<int> &cand1, Array<int> &cand2, int TEST, unsigned long int t_ini_g)
 {
@@ -835,45 +828,45 @@ int ParametrosBuscaLocal::viz_down_A_v2(Array<int> &A, Array<int> &a, Array<int>
 
     /* 1 NIVEL) A -> C */
     for (vert_AC = -1, parada_1=num_candA, i_AC=(int)(rand() % num_candA); parada_1 > 0; i_AC++)
-      {
-	if (a[i_AC] != -2) 
-	  {
-	    vert_AC = a[i_AC];
-	    if (DEPU) std::cout<<std::endl<<"vert_AC = "<<vert_AC<<std::endl;
-	    
-	    /* ---> */
-	    A[vert_AC]     = 0;
-	    C[vert_AC]     = 1;
-	    a[i_AC]        = -2;
-	    c[num_candC]   = vert_AC;
-	    c[num_candC+1] = -1;
+    {
+		if (a[i_AC] != -2) 
+	  	{
+		    vert_AC = a[i_AC];
+		    if (DEPU) std::cout<<std::endl<<"vert_AC = "<<vert_AC<<std::endl;
+		    
+		    /* ---> */
+		    A[vert_AC]     = 0;
+		    C[vert_AC]     = 1;
+		    a[i_AC]        = -2;
+		    c[num_candC]   = vert_AC;
+		    c[num_candC+1] = -1;
 
-	    moveu = move_2_C_AB_v2(vert_AC, 0, A, a, B, b, C, c, cand1, cand2, TEST);
+		    moveu = move_2_C_AB_v2(vert_AC, 0, A, a, B, b, C, c, cand1, cand2, TEST);
 
-	    if (moveu==true) 
-	      break;
-	    else
-	      {
-		/* <--- */
-		C[vert_AC]   = 0;
-		A[vert_AC]   = 1;
-		a[i_AC]      = vert_AC;
-		c[num_candC] = -1;
-	      }
-	  }
+		    if (moveu==true) 
+		    	break;
+		    else
+		    {
+			/* <--- */
+				C[vert_AC]   = 0;
+				A[vert_AC]   = 1;
+				a[i_AC]      = vert_AC;
+				c[num_candC] = -1;
+		    }
+	  	}
 
-	if (i_AC == (num_candA-1)) i_AC = -1;
-	parada_1--;
+		if (i_AC == (num_candA-1)) i_AC = -1;
+		parada_1--;
 
-      }
+    }
 
     if (TEST) testa_particoes_grasp_sig_v2(A, a, B, b, C, c);
     if (moveu)
-      {
+    {
 	/* maximiza solucao */
-	maximiza_solucao_grasp_sig_v2(A, a, B, b, C, c, cand1, cand2, TEST);
-	return 1;
-      }
+		maximiza_solucao_grasp_sig_v2(A, a, B, b, C, c, cand1, cand2, TEST);
+		return 1;
+    }
     else
       return 0;
 }
@@ -900,32 +893,32 @@ int ParametrosBuscaLocal::viz_down_B_v2(Array<int> &A, Array<int> &a, Array<int>
 
     /* 1 NIVEL) B -> C */
     for (vert_BC = -1, parada_1=num_candB, i_BC=(int)(rand() % num_candB); parada_1 > 0; i_BC++)
-      {
-	if (b[i_BC] != -2) 
-	  {
-	    vert_BC = b[i_BC];
-	    if (DEPU) std::cout<<std::endl<<"vert_BC = "<<vert_BC<<std::endl;
-	    
-	    /* ---> */
-	    B[vert_BC]     = 0;
-	    C[vert_BC]     = 1;
-	    b[i_BC]        = -2;
-	    c[num_candC]   = vert_BC;
-	    c[num_candC+1] = -1;
+    {
+		if (b[i_BC] != -2) 
+	  	{
+		    vert_BC = b[i_BC];
+		    if (DEPU) std::cout<<std::endl<<"vert_BC = "<<vert_BC<<std::endl;
+		    
+		    /* ---> */
+		    B[vert_BC]     = 0;
+		    C[vert_BC]     = 1;
+		    b[i_BC]        = -2;
+		    c[num_candC]   = vert_BC;
+		    c[num_candC+1] = -1;
 
-	    moveu = move_2_C_AB_v2(vert_BC, 1, A, a, B, b, C, c, cand1, cand2, TEST);
+		    moveu = move_2_C_AB_v2(vert_BC, 1, A, a, B, b, C, c, cand1, cand2, TEST);
 
-	    if (moveu==true) 
-	      break;
-	    else
-	      {
-		/* <--- */
-		C[vert_BC]   = 0;
-		B[vert_BC]   = 1;
-		b[i_BC]      = vert_BC;
-		c[num_candC] = -1;
-	      }
-	  }
+		    if (moveu==true) 
+		      break;
+		    else
+		    {
+			/* <--- */
+				C[vert_BC]   = 0;
+				B[vert_BC]   = 1;
+				b[i_BC]      = vert_BC;
+				c[num_candC] = -1;
+		    }
+	  	}
 
 	if (i_BC == (num_candB-1)) i_BC = -1;
 	parada_1--;
@@ -1400,4 +1393,11 @@ void ParametrosBuscaLocal::testa_particoes_grasp_sig_v2(Array<int> &A, Array<int
 	if (!achou) 
 	  { std::cout<<"vertice "<<ii<<" em (C), mas nao esta em (c)"<<std::endl; abort(); }
       }
+}
+
+void  ParametrosBuscaLocal::InternalThreadEntry()
+{
+
+	busca_local();
+
 }

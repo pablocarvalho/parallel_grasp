@@ -15,7 +15,7 @@ extern void mserro(const char *clas,const char *func,const char * ms,const int n
 //---------------------------------------------------------------------------
 
 #ifdef DEBUG_ALL
-#define DEBUG_ARRAY
+//#define DEBUG_ARRAY
 
 extern int nfree;
 extern int naloc;

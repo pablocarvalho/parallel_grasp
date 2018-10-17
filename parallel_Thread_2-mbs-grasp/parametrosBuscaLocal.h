@@ -24,12 +24,15 @@ public:
 	int ITMAX;
 	int TIMEMAX;
 	int TEST;
-	int* sol;
+	
 
 	  
 
-	ParametrosBuscaLocal(Array<int> &A, Array<int> &a, Array<int> &B, Array<int> &b, Array<int> &C, Array<int> &c, Array<int> &cand1, Array<int> &cand2, Array<int> &b_A, Array<int> &b_B, int ITMAX, int TIMEMAX, int TEST,int* sol)
-	{
+	ParametrosBuscaLocal(Array<int> &A, Array<int> &a, Array<int> &B, Array<int> &b, Array<int> &C, Array<int> &c, Array<int> &cand1, 
+		Array<int> &cand2, Array<int> &b_A, Array<int> &b_B, int ITMAX, int TIMEMAX, int TEST,
+		int* sol,Matriz<str_e> &g,Array<int> &stat,int n)
+	{    // grafo booleano de arestas positivas e negativas	
+	  
 		this->A = Array<int>(A);
 		this->a = Array<int>(a);
 		this->B = Array<int>(B);
@@ -45,14 +48,26 @@ public:
 		this->TEST = TEST;
 		this->sol = sol;
 
+		this->g = Matriz<str_e>(g);    // grafo booleano de arestas positivas e negativas
+		this->stat = Array<int>(stat);
+		this->n = n;  
+
 	};
+
+	virtual void ~ParametrosBuscaLocal(){};
+
+	int getSol(){return *sol;};
+
+protected:
+   /** Implement this method in your subclass with the code you want your thread to run. */
+   virtual void InternalThreadEntry();
 
 private:
 
 	Matriz<str_e> g;    // grafo booleano de arestas positivas e negativas
 	Array<int>    stat;
 	int           n;             // numero de vertices
-
+	int* sol;
 
 	bool can_move_C_X_v2(int l, Array<int> &x, Array<int> &y, Array<int> &C);
   bool can_2move_C_X_v2(int l1, int l2, Array<int> &x, Array<int> &y, Array<int> &C);
@@ -63,7 +78,7 @@ private:
 
   void maximiza_solucao_grasp_sig_v2(Array<int> &A, Array<int> &a, Array<int> &B, Array<int> &b, Array<int> &C,  Array<int> &c, Array<int> &cand1, Array<int> &cand2, int TEST);
 
-	void* busca_local(void* args);
+	void busca_local();
 	int  viz_down_A_v2(Array<int> &A, Array<int> &a, Array<int> &B, Array<int> &b, Array<int> &C, Array<int> &c, Array<int> &cand1, Array<int> &cand2, int TEST, unsigned long int t_ini_g);
 	int  viz_down_B_v2(Array<int> &A, Array<int> &a, Array<int> &B, Array<int> &b, Array<int> &C, Array<int> &c, Array<int> &cand1, Array<int> &cand2, int TEST, unsigned long int t_ini_g);
 	int  viz_2down_A_v2(Array<int> &A, Array<int> &a, Array<int> &B, Array<int> &b, Array<int> &C, Array<int> &c, Array<int> &cand1, Array<int> &cand2, int TEST, unsigned long int t_ini_g, int TIMEMAX);
@@ -74,6 +89,8 @@ private:
 	void atualiza_a_b_c(Array<int> &A, Array<int> &a, Array<int> &B, Array<int> &b, Array<int> &C, Array<int> &c);
 
 	double calcula_tempo(const unsigned long int ini, const unsigned long int fim);
+
+
 
 
 };
