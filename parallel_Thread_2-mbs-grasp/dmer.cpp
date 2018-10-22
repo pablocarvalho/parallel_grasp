@@ -87,29 +87,31 @@ void Dmer::le_dados_grasp(int MaxIter, int MaxTime)
 
   /* Grasp */
   //srand(5);
-  srand(my_rank);
-  ofstream arquivo("saida.txt");
-  t_ini2  = (unsigned long int) clock();
-  int jj = sg.grasp_sig_v2(sg.vet1, f, sg.vet2, f2, sg.vet3, f3, sg.vet4, f4, f5, f6, MaxIter, MaxTime, TEST);  
-  cout<< "Local maxIter = " <<MaxIter <<endl;
-  cout<<"Processo: " << my_rank << " ";
-  //cout<<nome<<" GRASP = "<<jj<<" Tempo = "<<calcula_tempo(t_ini2, (unsigned long int) clock())<<endl ;
-  cout<<"LOCAL GRASP = "<<jj<<" Tempo = "<<calcula_tempo(t_ini2, (unsigned long int) clock())<<endl ;
+  int qtdExecucoes=10;
+  for (int i=0;i<qtdExecucoes;i++) {
+    srand(p*i+my_rank);
+    //ofstream arquivo("saida.txt");
+    t_ini2  = (unsigned long int) clock();
+    int jj = sg.grasp_sig_v2(sg.vet1, f, sg.vet2, f2, sg.vet3, f3, sg.vet4, f4, f5, f6, MaxIter, MaxTime, TEST);  
+    cout<< "Local maxIter = " <<MaxIter <<endl;
+    cout<<"Processo: " << my_rank << " ";
+    //cout<<nome<<" GRASP = "<<jj<<" Tempo = "<<calcula_tempo(t_ini2, (unsigned long int) clock())<<endl ;
+    cout<<"LOCAL GRASP = "<<jj<<" Tempo = "<<calcula_tempo(t_ini2, (unsigned long int) clock())<<endl ;
 
 
 
 
-  int globalJJ;
-  MPI_Reduce(&jj,&globalJJ,1,MPI_INT,MPI_MAX,0, MPI_COMM_WORLD);
+    int globalJJ;
+    MPI_Reduce(&jj,&globalJJ,1,MPI_INT,MPI_MAX,0, MPI_COMM_WORLD);
 
 
-  if(my_rank == 0)
-  {
-  	//cout<<"GLOBAL GRASP = "<<globalJJ<<" Tempo = "<<calcula_tempo(t_ini2, (unsigned long int) clock())<<endl ;
-    arquivo << "GLOBAL GRASP = "<<globalJJ<<" Tempo = "<<calcula_tempo(t_ini2, (unsigned long int) clock())<<endl;
+    if(my_rank == 0)
+    {
+    	cout<<"GLOBAL GRASP = "<<globalJJ<<" Tempo = "<<calcula_tempo(t_ini2, (unsigned long int) clock())<<endl ;
+      //arquivo << "GLOBAL GRASP = "<<globalJJ<<" Tempo = "<<calcula_tempo(t_ini2, (unsigned long int) clock())<<endl;
+    }
   }
-
-  arquivo.close();
+  //arquivo.close();
 
 #ifdef PARALLEL
   MPI_Finalize();

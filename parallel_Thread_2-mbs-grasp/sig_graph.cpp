@@ -614,6 +614,35 @@ int Sigraph::grasp_sig_v2(Array<int> &A, Array<int> &a, Array<int> &B, Array<int
     * comunicações pendentes (left e right)
     */
 	std::cout << calcula_tempo(t_ini_g, (unsigned long int)clock()) << " rank: " << my_rank << " iniciou processo de encerramento" << std::endl;
+	std::cout << "pediCarga="<< pediCarga <<" mandeiCarga="<< mandeiCarga<<std::endl;
+
+	if (pediCarga)
+	{
+		if (!recebiCarga) {
+			incrementoRight = 0;
+			MPI_Test(&requestRight, &flagRight, &status);
+			while (flagRight == 0)
+			{
+				MPI_Test(&requestRight, &flagRight, &status);
+				
+		  		/*std::cout<<calcula_tempo(t_ini_g, (unsigned long int) clock()) 
+		  		<<" Processo = "<<my_rank<<" recebeu "
+	  			<< incrementoRight<<" iteracoes do processo "<<right<<std::endl;
+	  			*/
+			}
+			recebiCarga=true;
+		}
+	}
+	else
+	{
+		incrementoRight = 0;
+		MPI_Send(&incrementoRight, 1, MPI_INT, right, PedirCarga, MPI_COMM_WORLD);
+		//std::cout<<calcula_tempo(t_ini_g, (unsigned long int) clock())
+		//<<" Processo = "<<my_rank<<" pediu(final) carga para "
+		//<<right<<std::endl;
+		pediCarga = true;
+	}
+
 	if (!mandeiCarga)
 	{
 		MPI_Test(&requestLeft, &flagLeft, &status);
@@ -631,30 +660,6 @@ int Sigraph::grasp_sig_v2(Array<int> &A, Array<int> &a, Array<int> &B, Array<int
 
 		pediramCarga = true;
 		mandeiCarga = true;
-	}
-
-	if (pediCarga)
-	{
-		incrementoRight = 0;
-		MPI_Test(&requestRight, &flagRight, &status);
-		while (flagRight == 0)
-		{
-			MPI_Test(&requestRight, &flagRight, &status);
-			/*
-	  		std::cout<<calcula_tempo(t_ini_g, (unsigned long int) clock()) 
-	  		<<" Processo = "<<my_rank<<" recebeu "
-  			<< incrementoRight<<" iteracoes do processo "<<right<<std::endl;
-  			*/
-		}
-	}
-	else
-	{
-		incrementoRight = 0;
-		MPI_Send(&incrementoRight, 1, MPI_INT, right, PedirCarga, MPI_COMM_WORLD);
-		//std::cout<<calcula_tempo(t_ini_g, (unsigned long int) clock())
-		//<<" Processo = "<<my_rank<<" pediu(final) carga para "
-		//<<right<<std::endl;
-		pediCarga = true;
 	}
 
 	//std::cout<<calcula_tempo(t_ini_g, (unsigned long int) clock()) <<" Processo = "<<my_rank<< "/Local maxIter = " <<ITMAX <<std::endl;
