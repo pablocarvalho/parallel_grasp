@@ -1,0 +1,2 @@
+#mpirun -n 2 --machinefile 2maquinas -map-by ppr:1:node dmer 1-t0.300-to0.05-y2003-m11-p90-signed.g.g 100 600 | tee output.txt
+mpirun -n 3 dmer 1-t0.300-to0.05-y2003-m11-p90-signed.g.g 9 600 | tee output.txt
