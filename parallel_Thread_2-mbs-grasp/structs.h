@@ -13,7 +13,7 @@
 #ifndef TEMPOMAXGRASP
 #define TEMPOMAXGRASP 300
 #endif
-
+#include <iostream>
 // estrutura aresta do grafo
 typedef struct edge_st
 {
@@ -21,6 +21,9 @@ typedef struct edge_st
   bool neg;
 } str_e;
 
+inline std::ostream &operator<<(std::ostream &os, str_e const &m) { 
+    return os << "(" << m.pos << "," << m.neg << ");";
+}
 
 // estrutura pilha
 struct ststackno

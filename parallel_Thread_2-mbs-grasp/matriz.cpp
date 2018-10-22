@@ -28,9 +28,11 @@ class Matriz
 public:
   Matriz():pType(NULL),n(0),m(0){}
   Matriz(const int nin, const int min, const T val = 0);
+  Matriz(const Matriz &rhs);
   ~Matriz();
   T& operator()(const int i, const int j);
   const T& operator()(const int i, const int j) const;
+  Matriz& operator= (const Matriz&);
   void redefine(const int novo_n, const int novo_m, const T val = 0); // aloca a matriz e os elementos ficam igual a val
   void aloca(const int novo_n, const int novo_m);  // aloca a matriz
   void set(const T val = 0);  // toda a matriz fica igual a val
@@ -38,6 +40,8 @@ public:
   void get_size(int &nout, int &mout) {nout = n; mout = m;}
   void desaloca() {del(); n=m = 0; pType = NULL;}
   void imprime();
+  int getNumLinhas() const{return n;};
+  int getNumColunas() const{return m;};
 private:
   void del();
   T **pType;
@@ -46,6 +50,25 @@ private:
 };
 
 //---------------------------------------------------------------------------
+
+template <class T>
+Matriz<T>::Matriz(const Matriz &rhs)
+{
+  pType = NULL;
+  aloca(rhs.getNumLinhas(),rhs.getNumColunas());
+  for(int i=0;i<n;i++)
+  {
+    for(int j=0;j<m;j++)
+    {
+      
+      pType[i][j] = rhs(i,j);
+    }
+    
+    
+  }  
+    
+  
+}
 
 template <class T>
 Matriz<T>::Matriz(const int nin, const int min, const T val)
@@ -74,6 +97,24 @@ T& Matriz<T>::operator()(const int i, const int j)
     mserro("Matriz", "operator()", "i e/ou j invalidos", 5);
 #endif
  return pType[i][j];
+}
+
+template <class T> 
+Matriz<T>& Matriz<T>::operator=(const Matriz &rhs)
+{
+  pType = NULL;
+  aloca(rhs.getNumLinhas(),rhs.getNumColunas());
+  for(int i=0;i<n;i++)
+  {
+    for(int j=0;j<m;j++)
+    {
+      
+      pType[i][j] = rhs(i,j);
+    }    
+    
+  }     
+  return *this;
+  
 }
 
 //---------------------------------------------------------------------------

@@ -1,7 +1,7 @@
 ########### COMPILADORES E PARAMETROS
 #CCC           = g++-5
 #CCC           = g++
-CCC           = /opt/openmpi-2.1.1/bin/mpic++
+CCC           = mpic++
 CFLAGS        =  -Wall  -Wno-deprecated -Wno-write-strings -O3 #-ansi
 DEBUG         =  -D DEBUG_ALL
 
@@ -25,7 +25,7 @@ dmer: ${OBJS}
 	${CCC} ${CFLAGS}  $(DEBUG) -o $@ $(OBJS) $(LIBS)
 
 .cpp.o:
-	$(CCC) $(CFLAGS) $(DEBUG) $< -c -o $@
+	$(CCC) $(CFLAGS) $(DEBUG) $< -c -g -o $@
 
 
 #### LIMPEZA GOLS
