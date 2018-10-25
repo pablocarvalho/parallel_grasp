@@ -451,7 +451,7 @@ int Sigraph::grasp_sig_v2(Array<int> &A, Array<int> &a, Array<int> &B, Array<int
 	unsigned long int t_ini_g;
 
 	/* PARAMETROS */
-	int DEPU = 1;
+	int DEPU = 0;
 	/* variaveis MPI */
 	int my_rank, p, source;
 	int incrementoLeft = 0;
@@ -491,18 +491,18 @@ int Sigraph::grasp_sig_v2(Array<int> &A, Array<int> &a, Array<int> &B, Array<int
 		ParametrosBuscaLocal pbl0(A, a, B, b, C, c, cand1, cand2, b_A, b_B, ITMAX, t_ini_g, TIMEMAX, TEST, solT0, g, stat, n);
 		ParametrosBuscaLocal pbl1(A, a, B, b, C, c, cand1, cand2, b_A, b_B, ITMAX, t_ini_g, TIMEMAX, TEST, solT1, g, stat, n);
 		pbl0.StartInternalThread();
-		std::cout << "CRIOU THREAD 1" << std::endl;
+		//std::cout << "CRIOU THREAD 1" << std::endl;
 		pbl1.StartInternalThread();
 
-		std::cout << "CRIOU THREAD 2" << std::endl;
+		//std::cout << "CRIOU THREAD 2" << std::endl;
 
 		pbl0.WaitForInternalThreadToExit();
-		std::cout << "FIM DA THREAD 1" << std::endl;
+		//std::cout << "FIM DA THREAD 1" << std::endl;
 		pbl1.WaitForInternalThreadToExit();
-		std::cout << "FIM DA THREAD 2" << std::endl;
+		//std::cout << "FIM DA THREAD 2" << std::endl;
 		
-		std::cout << "thread 1 sol: " <<*solT0 << std::endl;
-		std::cout << "thread 2 sol: " <<*solT1 << std::endl;
+		//std::cout << "thread 1 sol: " <<*solT0 << std::endl;
+		//std::cout << "thread 2 sol: " <<*solT1 << std::endl;
 
 		if (*solT0 > *solT1)
 		{
@@ -512,7 +512,7 @@ int Sigraph::grasp_sig_v2(Array<int> &A, Array<int> &a, Array<int> &B, Array<int
 		{
 			sol = *solT1;
 		}
-		std::cout << "TERMINOU COMPARAÇÃO" << std::endl;
+		//std::cout << "TERMINOU COMPARAÇÃO" << std::endl;
 		
 		//Sigraph::busca_local(A, a, B, b, C, c, cand1, cand2, b_A, b_B,  ITMAX,  TIMEMAX,  TEST, solT1);
 		//------------------ final paralelização thread -------------------------
@@ -547,8 +547,8 @@ int Sigraph::grasp_sig_v2(Array<int> &A, Array<int> &a, Array<int> &B, Array<int
 		// 	flagLeft=0;
 		// }
 
-		//std::cout<<calcula_tempo(t_ini_g, (unsigned long int) clock())
-		//<<" eu sou o processo "<<my_rank<<" terminei " << it <<" de "<< ITMAX<<std::endl;
+		std::cout<<calcula_tempo(t_ini_g, (unsigned long int) clock())
+		<<" eu sou o processo "<<my_rank<<" terminei " << it <<" de "<< ITMAX<<std::endl;
 		MPI_Test(&requestLeft, &flagLeft, &status);
 		//testa (linha acima) e conclui a comunicação aberta com MPI_Irecv
 		if (flagLeft != 0 && mandeiCarga == false)
@@ -557,11 +557,11 @@ int Sigraph::grasp_sig_v2(Array<int> &A, Array<int> &a, Array<int> &B, Array<int
 			ITMAX -= incrementoRight;
 			MPI_Send(&incrementoRight, 1, MPI_INT, left, PedirCarga, MPI_COMM_WORLD);
 
-			/*
-	      		std::cout<<calcula_tempo(t_ini_g, (unsigned long int) clock())<<
-	      		" Processo = "<<my_rank<<" enviou(A) "<<incrementoRight<<" iteracoes para "	      		
-	      		<<left<<" total de iteracoes=" <<ITMAX <<" iteracoes em " << my_rank <<std::endl;
-	      		*/
+			
+	      		// std::cout<<calcula_tempo(t_ini_g, (unsigned long int) clock())<<
+	      		// " Processo = "<<my_rank<<" enviou(A) "<<incrementoRight<<" iteracoes para "	      		
+	      		// <<left<<" total de iteracoes=" <<ITMAX <<" iteracoes em " << my_rank <<std::endl;
+	      		
 			mandeiCarga = true;
 			pediramCarga = true;
 		}
@@ -576,10 +576,10 @@ int Sigraph::grasp_sig_v2(Array<int> &A, Array<int> &a, Array<int> &B, Array<int
 			//{
 			MPI_Send(&incrementoRight, 1, MPI_INT, right, PedirCarga, MPI_COMM_WORLD);
 
-			/*
-      			std::cout<<calcula_tempo(t_ini_g, (unsigned long int) clock())<<" Processo = "<<my_rank<<" pediu carga a "
-      		<<right<<std::endl;
-      		*/
+			
+      		// 	std::cout<<calcula_tempo(t_ini_g, (unsigned long int) clock())<<" Processo = "<<my_rank<<" pediu carga a "
+      		// <<right<<std::endl;
+      		
 			pediCarga = true;
 			MPI_Irecv(&incrementoRight, 1, MPI_INT, right, PedirCarga, MPI_COMM_WORLD, &requestRight);
 			//}
@@ -603,9 +603,28 @@ int Sigraph::grasp_sig_v2(Array<int> &A, Array<int> &a, Array<int> &B, Array<int
 						break;
 					}
 				}
+
+				if (!mandeiCarga) {
+					MPI_Test(&requestLeft, &flagLeft, &status);
+					//testa (linha acima) e conclui a comunicação aberta com MPI_Irecv
+					if (flagLeft != 0)
+					{
+						incrementoRight = (ITMAX - it) / 2;
+						ITMAX -= incrementoRight;
+						MPI_Send(&incrementoRight, 1, MPI_INT, left, PedirCarga, MPI_COMM_WORLD);
+
+						
+				      		// std::cout<<calcula_tempo(t_ini_g, (unsigned long int) clock())<<
+				      		// " Processo = "<<my_rank<<" enviou(A) "<<incrementoRight<<" iteracoes para "	      		
+				      		// <<left<<" total de iteracoes=" <<ITMAX <<" iteracoes em " << my_rank <<std::endl;
+				      		
+						mandeiCarga = true;
+						pediramCarga = true;
+					}
+				}
 			}
 		}
-		std::cout << "FIM DA ITERAÇÃO" << std::endl;
+		//std::cout << "FIM DA ITERAÇÃO" << std::endl;
 	} /* for (it=0; it<ITMAX; it++) */
 	delete solT0;
 	delete solT1;
@@ -613,54 +632,97 @@ int Sigraph::grasp_sig_v2(Array<int> &A, Array<int> &a, Array<int> &B, Array<int
 	/*Caso saia por timeout e ainda esteja aguardando pedido de carga, trata as 
     * comunicações pendentes (left e right)
     */
-	std::cout << calcula_tempo(t_ini_g, (unsigned long int)clock()) << " rank: " << my_rank << " iniciou processo de encerramento" << std::endl;
-	std::cout << "pediCarga="<< pediCarga <<" mandeiCarga="<< mandeiCarga<<std::endl;
+	//std::cout << calcula_tempo(t_ini_g, (unsigned long int)clock()) << " rank: " << my_rank << " iniciou processo de encerramento" << std::endl;
+	//std::cout << "pediCarga="<< pediCarga <<" mandeiCarga="<< mandeiCarga<<std::endl;
 
-	if (pediCarga)
+
+
+	while (!(recebiCarga && mandeiCarga))
 	{
-		if (!recebiCarga) {
-			incrementoRight = 0;
-			MPI_Test(&requestRight, &flagRight, &status);
-			while (flagRight == 0)
+
+		if (pediCarga)
+		{
+			if (!recebiCarga) 
 			{
+				incrementoRight = 0;
 				MPI_Test(&requestRight, &flagRight, &status);
+				if (flagRight != 0)
+				{
+					recebiCarga=true;
+				}
 				
-		  		/*std::cout<<calcula_tempo(t_ini_g, (unsigned long int) clock()) 
-		  		<<" Processo = "<<my_rank<<" recebeu "
-	  			<< incrementoRight<<" iteracoes do processo "<<right<<std::endl;
-	  			*/
 			}
-			recebiCarga=true;
 		}
-	}
-	else
-	{
-		incrementoRight = 0;
-		MPI_Send(&incrementoRight, 1, MPI_INT, right, PedirCarga, MPI_COMM_WORLD);
-		//std::cout<<calcula_tempo(t_ini_g, (unsigned long int) clock())
-		//<<" Processo = "<<my_rank<<" pediu(final) carga para "
-		//<<right<<std::endl;
-		pediCarga = true;
-	}
+		else
+		{
+			incrementoRight = 0;
+			MPI_Send(&incrementoRight, 1, MPI_INT, right, PedirCarga, MPI_COMM_WORLD);
+			//std::cout<<calcula_tempo(t_ini_g, (unsigned long int) clock())
+			//<<" Processo = "<<my_rank<<" pediu(final) carga para "
+			//<<right<<std::endl;
+			pediCarga = true;
+		}
 
-	if (!mandeiCarga)
-	{
-		MPI_Test(&requestLeft, &flagLeft, &status);
-		incrementoLeft = 0;
-		while (flagLeft == 0)
+		if (!mandeiCarga)
 		{
 			MPI_Test(&requestLeft, &flagLeft, &status);
+			incrementoLeft = 0;
+			if (flagLeft != 0)
+			{
+				MPI_Send(&incrementoLeft, 1, MPI_INT, left, PedirCarga, MPI_COMM_WORLD);
+				pediramCarga = true;
+				mandeiCarga = true;
+			}
+			
 		}
-		MPI_Send(&incrementoLeft, 1, MPI_INT, left, PedirCarga, MPI_COMM_WORLD);
-		/*
-	  	std::cout<<calcula_tempo(t_ini_g, (unsigned long int) clock())
-	  	<<" Processo = "<<my_rank<<" enviou(C) "<<incrementoLeft<<" iteracoes para "
-	  		<<left<<std::endl;
-	  		*/
-
-		pediramCarga = true;
-		mandeiCarga = true;
 	}
+	
+
+	// if (pediCarga)
+	// {
+	// 	if (!recebiCarga) {
+	// 		incrementoRight = 0;
+	// 		MPI_Test(&requestRight, &flagRight, &status);
+	// 		while (flagRight == 0)
+	// 		{
+	// 			MPI_Test(&requestRight, &flagRight, &status);
+				
+	// 	  		/*std::cout<<calcula_tempo(t_ini_g, (unsigned long int) clock()) 
+	// 	  		<<" Processo = "<<my_rank<<" recebeu "
+	//   			<< incrementoRight<<" iteracoes do processo "<<right<<std::endl;
+	//   			*/
+	// 		}
+	// 		recebiCarga=true;
+	// 	}
+	// }
+	// else
+	// {
+	// 	incrementoRight = 0;
+	// 	MPI_Send(&incrementoRight, 1, MPI_INT, right, PedirCarga, MPI_COMM_WORLD);
+	// 	//std::cout<<calcula_tempo(t_ini_g, (unsigned long int) clock())
+	// 	//<<" Processo = "<<my_rank<<" pediu(final) carga para "
+	// 	//<<right<<std::endl;
+	// 	pediCarga = true;
+	// }
+
+	// if (!mandeiCarga)
+	// {
+	// 	MPI_Test(&requestLeft, &flagLeft, &status);
+	// 	incrementoLeft = 0;
+	// 	while (flagLeft == 0)
+	// 	{
+	// 		MPI_Test(&requestLeft, &flagLeft, &status);
+	// 	}
+	// 	MPI_Send(&incrementoLeft, 1, MPI_INT, left, PedirCarga, MPI_COMM_WORLD);
+	// 	/*
+	//   	std::cout<<calcula_tempo(t_ini_g, (unsigned long int) clock())
+	//   	<<" Processo = "<<my_rank<<" enviou(C) "<<incrementoLeft<<" iteracoes para "
+	//   		<<left<<std::endl;
+	//   		*/
+
+	// 	pediramCarga = true;
+	// 	mandeiCarga = true;
+	// }
 
 	//std::cout<<calcula_tempo(t_ini_g, (unsigned long int) clock()) <<" Processo = "<<my_rank<< "/Local maxIter = " <<ITMAX <<std::endl;
 
