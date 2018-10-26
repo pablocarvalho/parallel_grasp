@@ -1,0 +1,62 @@
+Format:
+dmer <file> <MaxGraspIter:default=100> <MaxGraspTime:default=300>
+
+  <file> = bienst1.mps.g.g
+  <MaxGraspIter> = 100
+  <MaxGraspTime> = 100000
+Format:
+dmer <file> <MaxGraspIter:default=100> <MaxGraspTime:default=300>
+
+  <file> = bienst1.mps.g.g
+  <MaxGraspIter> = 100
+  <MaxGraspTime> = 100000
+Execucao: 1---------------------------------------------------------------------------------
+Processo: 0 LOCAL GRASP = 90 Tempo = 187.91
+GLOBAL GRASP = 90 Tempo = 187.91
+Execucao: 1---------------------------------------------------------------------------------
+Processo: 1 LOCAL GRASP = 90 Tempo = 185.29
+Execucao: 2---------------------------------------------------------------------------------
+Processo: 0 LOCAL GRASP = 90 Tempo = 206.77
+GLOBAL GRASP = 90 Tempo = 206.77
+Execucao: 2---------------------------------------------------------------------------------
+Processo: 1 LOCAL GRASP = 90 Tempo = 197.31
+Execucao: 3---------------------------------------------------------------------------------
+Processo: 0 LOCAL GRASP = 90 Tempo = 217.55
+GLOBAL GRASP = 90 Tempo = 221.22
+Execucao: 3---------------------------------------------------------------------------------
+Processo: 1 LOCAL GRASP = 90 Tempo = 215.12
+Execucao: 4---------------------------------------------------------------------------------
+Processo: 0 LOCAL GRASP = 90 Tempo = 181.56
+GLOBAL GRASP = 90 Tempo = 181.56
+Execucao: 4---------------------------------------------------------------------------------
+Processo: 1 LOCAL GRASP = 90 Tempo = 182.87
+Execucao: 5---------------------------------------------------------------------------------
+Processo: 0 LOCAL GRASP = 90 Tempo = 195.17
+GLOBAL GRASP = 90 Tempo = 195.17
+Execucao: 5---------------------------------------------------------------------------------
+Processo: 1 LOCAL GRASP = 90 Tempo = 203.48
+Execucao: 6---------------------------------------------------------------------------------
+Processo: 0 LOCAL GRASP = 90 Tempo = 186.23
+GLOBAL GRASP = 90 Tempo = 187.67
+Execucao: 6---------------------------------------------------------------------------------
+Processo: 1 LOCAL GRASP = 90 Tempo = 184.64
+Execucao: 7---------------------------------------------------------------------------------
+Processo: 0 LOCAL GRASP = 90 Tempo = 195.69
+GLOBAL GRASP = 90 Tempo = 195.69
+Execucao: 7---------------------------------------------------------------------------------
+Processo: 1 LOCAL GRASP = 90 Tempo = 206.85
+Execucao: 8---------------------------------------------------------------------------------
+Processo: 0 LOCAL GRASP = 90 Tempo = 193.06
+GLOBAL GRASP = 90 Tempo = 193.06
+Execucao: 8---------------------------------------------------------------------------------
+Processo: 1 LOCAL GRASP = 90 Tempo = 197.38
+Execucao: 9---------------------------------------------------------------------------------
+Processo: 0 LOCAL GRASP = 90 Tempo = 188.89
+GLOBAL GRASP = 90 Tempo = 190.82
+Execucao: 9---------------------------------------------------------------------------------
+Processo: 1 LOCAL GRASP = 90 Tempo = 185.98
+Execucao: 10---------------------------------------------------------------------------------
+Processo: 1 LOCAL GRASP = 90 Tempo = 191.91
+Execucao: 10---------------------------------------------------------------------------------
+Processo: 0 LOCAL GRASP = 90 Tempo = 186.11
+GLOBAL GRASP = 90 Tempo = 186.11

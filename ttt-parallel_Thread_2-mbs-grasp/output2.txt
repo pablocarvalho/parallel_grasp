@@ -1,0 +1,62 @@
+Format:
+dmer <file> <MaxGraspIter:default=100> <MaxGraspTime:default=300>
+
+  <file> = danoint.mps.g.g
+  <MaxGraspIter> = 100
+  <MaxGraspTime> = 100000
+Format:
+dmer <file> <MaxGraspIter:default=100> <MaxGraspTime:default=300>
+
+  <file> = danoint.mps.g.g
+  <MaxGraspIter> = 100
+  <MaxGraspTime> = 100000
+Execucao: 1---------------------------------------------------------------------------------
+Processo: 0 LOCAL GRASP = 96 Tempo = 23.27
+GLOBAL GRASP = 96 Tempo = 23.33
+Execucao: 1---------------------------------------------------------------------------------
+Processo: 1 LOCAL GRASP = 96 Tempo = 22.6
+Execucao: 2---------------------------------------------------------------------------------
+Processo: 0 LOCAL GRASP = 96 Tempo = 22.72
+GLOBAL GRASP = 96 Tempo = 22.72
+Execucao: 2---------------------------------------------------------------------------------
+Processo: 1 LOCAL GRASP = 96 Tempo = 23.64
+Execucao: 3---------------------------------------------------------------------------------
+Processo: 0 LOCAL GRASP = 96 Tempo = 24.37
+GLOBAL GRASP = 96 Tempo = 24.87
+Execucao: 3---------------------------------------------------------------------------------
+Processo: 1 LOCAL GRASP = 96 Tempo = 24.68
+Execucao: 4---------------------------------------------------------------------------------
+Processo: 0 LOCAL GRASP = 96 Tempo = 23.5
+GLOBAL GRASP = 96 Tempo = 23.5
+Execucao: 4---------------------------------------------------------------------------------
+Processo: 1 LOCAL GRASP = 96 Tempo = 24.15
+Execucao: 5---------------------------------------------------------------------------------
+Processo: 1 LOCAL GRASP = 96 Tempo = 25.84
+Execucao: 5---------------------------------------------------------------------------------
+Processo: 0 LOCAL GRASP = 96 Tempo = 25.96
+GLOBAL GRASP = 96 Tempo = 25.96
+Execucao: 6---------------------------------------------------------------------------------
+Processo: 0 LOCAL GRASP = 96 Tempo = 22.32
+GLOBAL GRASP = 96 Tempo = 22.32
+Execucao: 6---------------------------------------------------------------------------------
+Processo: 1 LOCAL GRASP = 96 Tempo = 22.91
+Execucao: 7---------------------------------------------------------------------------------
+Processo: 0 LOCAL GRASP = 96 Tempo = 27.22
+GLOBAL GRASP = 96 Tempo = 27.22
+Execucao: 7---------------------------------------------------------------------------------
+Processo: 1 LOCAL GRASP = 96 Tempo = 26.62
+Execucao: 8---------------------------------------------------------------------------------
+Processo: 0 LOCAL GRASP = 96 Tempo = 26.36
+GLOBAL GRASP = 96 Tempo = 26.52
+Execucao: 8---------------------------------------------------------------------------------
+Processo: 1 LOCAL GRASP = 96 Tempo = 26.17
+Execucao: 9---------------------------------------------------------------------------------
+Processo: 0 LOCAL GRASP = 96 Tempo = 24.45
+GLOBAL GRASP = 96 Tempo = 24.72
+Execucao: 9---------------------------------------------------------------------------------
+Processo: 1 LOCAL GRASP = 96 Tempo = 23.53
+Execucao: 10---------------------------------------------------------------------------------
+Processo: 0 LOCAL GRASP = 96 Tempo = 24.84
+GLOBAL GRASP = 96 Tempo = 24.84
+Execucao: 10---------------------------------------------------------------------------------
+Processo: 1 LOCAL GRASP = 96 Tempo = 24.93

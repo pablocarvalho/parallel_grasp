@@ -1,0 +1,46 @@
+Format:
+dmer <file> <MaxGraspIter:default=100> <MaxGraspTime:default=300>
+
+  <file> = 1-t0.300-to0.05-y2003-m11-p90-signed.g.g
+  <MaxGraspIter> = 4
+  <MaxGraspTime> = 20
+Format:
+dmer <file> <MaxGraspIter:default=100> <MaxGraspTime:default=300>
+
+  <file> = 1-t0.300-to0.05-y2003-m11-p90-signed.g.g
+  <MaxGraspIter> = 4
+  <MaxGraspTime> = 20
+
+IT = 1) solucao inicial com 188 vertices
+
+IT = 1) solucao inicial com 188 vertices
+CRIOU THREAD 1
+CRIOU THREAD 2
+CRIOU THREAD 1
+CRIOU THREAD 2
+FIM DA THREAD 1
+FIM DA THREAD 2
+thread 1 sol: 324
+thread 2 sol: 326
+TERMINOU COMPARAÇÃO
+
+IT = 1) ---------------------------------- MELHOR SOLUCAO COM 326 VERTICES
+
+TEMPO = 20.0015 seg
+20.0017 rank: 0 iniciou processo de encerramento
+pediCarga=0 mandeiCarga=0
+FIM DA THREAD 1
+FIM DA THREAD 2
+thread 1 sol: 322
+thread 2 sol: 320
+TERMINOU COMPARAÇÃO
+
+IT = 1) ---------------------------------- MELHOR SOLUCAO COM 322 VERTICES
+
+TEMPO = 20.0004 seg
+20.0008 rank: 1 iniciou processo de encerramento
+pediCarga=0 mandeiCarga=0
+Local maxIter = 2
+Processo: 0 LOCAL GRASP = 326 Tempo = 20.0265
+Local maxIter = 2
+Processo: 1 LOCAL GRASP = 322 Tempo = 20.0009

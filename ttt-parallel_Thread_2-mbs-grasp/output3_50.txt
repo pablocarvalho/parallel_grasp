@@ -1,0 +1,562 @@
+Format:
+dmer <file> <MaxGraspIter:default=100> <MaxGraspTime:default=300>
+
+  <file> = bienst1.mps.g.g
+  <MaxGraspIter> = 50
+  <MaxGraspTime> = 100000
+Format:
+dmer <file> <MaxGraspIter:default=100> <MaxGraspTime:default=300>
+
+  <file> = bienst1.mps.g.g
+  <MaxGraspIter> = 50
+  <MaxGraspTime> = 100000
+3.85 eu sou o processo 1 terminei 1 de 25
+5.52 eu sou o processo 0 terminei 1 de 25
+7.72 eu sou o processo 1 terminei 2 de 25
+9.92 eu sou o processo 0 terminei 2 de 25
+12.79 eu sou o processo 0 terminei 3 de 25
+12.46 eu sou o processo 1 terminei 3 de 25
+17.03 eu sou o processo 1 terminei 4 de 25
+19.07 eu sou o processo 0 terminei 4 de 25
+19.34 eu sou o processo 1 terminei 5 de 25
+21.97 eu sou o processo 0 terminei 5 de 25
+22.16 eu sou o processo 1 terminei 6 de 25
+24.32 eu sou o processo 0 terminei 6 de 25
+28.42 eu sou o processo 0 terminei 7 de 25
+29.82 eu sou o processo 1 terminei 7 de 25
+30.94 eu sou o processo 0 terminei 8 de 25
+33.69 eu sou o processo 1 terminei 8 de 25
+35.55 eu sou o processo 0 terminei 9 de 25
+36.59 eu sou o processo 1 terminei 9 de 25
+37.79 eu sou o processo 0 terminei 10 de 25
+40.06 eu sou o processo 0 terminei 11 de 25
+43.4 eu sou o processo 0 terminei 12 de 25
+43.66 eu sou o processo 1 terminei 10 de 25
+46.23 eu sou o processo 1 terminei 11 de 25
+47.24 eu sou o processo 0 terminei 13 de 25
+49.14 eu sou o processo 0 terminei 14 de 25
+50.46 eu sou o processo 1 terminei 12 de 25
+53.13 eu sou o processo 1 terminei 13 de 25
+55.66 eu sou o processo 0 terminei 15 de 25
+58.72 eu sou o processo 1 terminei 14 de 25
+62.72 eu sou o processo 0 terminei 16 de 25
+62.77 eu sou o processo 1 terminei 15 de 25
+65 eu sou o processo 1 terminei 16 de 25
+65.97 eu sou o processo 0 terminei 17 de 25
+69.43 eu sou o processo 0 terminei 18 de 25
+69.58 eu sou o processo 1 terminei 17 de 25
+72.69 eu sou o processo 0 terminei 19 de 25
+72.01 eu sou o processo 1 terminei 18 de 25
+74.68 eu sou o processo 0 terminei 20 de 25
+74.57 eu sou o processo 1 terminei 19 de 25
+77.46 eu sou o processo 1 terminei 20 de 25
+80.46 eu sou o processo 0 terminei 21 de 25
+79.77 eu sou o processo 1 terminei 21 de 25
+83.48 eu sou o processo 1 terminei 22 de 25
+85.12 eu sou o processo 0 terminei 22 de 25
+87.92 eu sou o processo 0 terminei 23 de 25
+87.19 eu sou o processo 1 terminei 23 de 25
+92.96 eu sou o processo 1 terminei 24 de 25
+96.06 eu sou o processo 0 terminei 24 de 25
+95.7 eu sou o processo 1 terminei 25 de 25
+99.29 eu sou o processo 0 terminei 25 de 25
+Execucao: 1---------------------------------------------------------------------------------
+Processo: 0 LOCAL GRASP = 90 Tempo = 99.29
+GLOBAL GRASP = 90 Tempo = 99.29
+Execucao: 1---------------------------------------------------------------------------------
+Processo: 1 LOCAL GRASP = 90 Tempo = 97.21
+6.95 eu sou o processo 0 terminei 1 de 25
+8.98 eu sou o processo 1 terminei 1 de 25
+11.57 eu sou o processo 0 terminei 2 de 25
+12.64 eu sou o processo 1 terminei 2 de 25
+15.06 eu sou o processo 1 terminei 3 de 25
+16.88 eu sou o processo 0 terminei 3 de 25
+19.81 eu sou o processo 0 terminei 4 de 25
+22.98 eu sou o processo 1 terminei 4 de 25
+22.87 eu sou o processo 0 terminei 5 de 25
+25.42 eu sou o processo 1 terminei 5 de 25
+25.23 eu sou o processo 0 terminei 6 de 25
+29.83 eu sou o processo 1 terminei 6 de 25
+29.89 eu sou o processo 0 terminei 7 de 25
+33.53 eu sou o processo 1 terminei 7 de 25
+34.42 eu sou o processo 0 terminei 8 de 25
+36.07 eu sou o processo 1 terminei 8 de 25
+37.94 eu sou o processo 0 terminei 9 de 25
+40.82 eu sou o processo 1 terminei 9 de 25
+44.15 eu sou o processo 1 terminei 10 de 25
+43.29 eu sou o processo 0 terminei 10 de 25
+45.54 eu sou o processo 0 terminei 11 de 25
+48.25 eu sou o processo 1 terminei 11 de 25
+48.09 eu sou o processo 0 terminei 12 de 25
+51.07 eu sou o processo 1 terminei 12 de 25
+53.49 eu sou o processo 1 terminei 13 de 25
+53.1 eu sou o processo 0 terminei 13 de 25
+58.06 eu sou o processo 1 terminei 14 de 25
+57.99 eu sou o processo 0 terminei 14 de 25
+60.32 eu sou o processo 0 terminei 15 de 25
+63.91 eu sou o processo 1 terminei 15 de 25
+64.1 eu sou o processo 0 terminei 16 de 25
+66.54 eu sou o processo 1 terminei 16 de 25
+67.6 eu sou o processo 0 terminei 17 de 25
+69.17 eu sou o processo 1 terminei 17 de 25
+72.41 eu sou o processo 1 terminei 18 de 25
+74.25 eu sou o processo 0 terminei 18 de 25
+76.65 eu sou o processo 0 terminei 19 de 25
+80.69 eu sou o processo 0 terminei 20 de 25
+83.8 eu sou o processo 1 terminei 19 de 25
+82.59 eu sou o processo 0 terminei 21 de 25
+86.71 eu sou o processo 1 terminei 20 de 25
+87.32 eu sou o processo 0 terminei 22 de 25
+89.55 eu sou o processo 1 terminei 21 de 25
+89.33 eu sou o processo 0 terminei 23 de 25
+91.47 eu sou o processo 0 terminei 24 de 25
+94.26 eu sou o processo 1 terminei 22 de 25
+95.29 eu sou o processo 0 terminei 25 de 25
+98.72 eu sou o processo 1 terminei 23 de 25
+101.23 eu sou o processo 1 terminei 24 de 24
+Execucao: 2---------------------------------------------------------------------------------
+Processo: 1 LOCAL GRASP = 90 Tempo = 101.23
+2.93 eu sou o processo 1 terminei 1 de 25
+102.07 eu sou o processo 0 terminei 26 de 26
+Execucao: 2---------------------------------------------------------------------------------
+Processo: 0 LOCAL GRASP = 90 Tempo = 102.07
+GLOBAL GRASP = 90 Tempo = 102.07
+7.45 eu sou o processo 1 terminei 2 de 25
+4.15 eu sou o processo 0 terminei 1 de 25
+6.53 eu sou o processo 0 terminei 2 de 25
+10.57 eu sou o processo 1 terminei 3 de 25
+12.56 eu sou o processo 1 terminei 4 de 25
+14.81 eu sou o processo 1 terminei 5 de 25
+11.75 eu sou o processo 0 terminei 3 de 25
+19.13 eu sou o processo 1 terminei 6 de 25
+17.82 eu sou o processo 0 terminei 4 de 25
+21.66 eu sou o processo 1 terminei 7 de 25
+20.79 eu sou o processo 0 terminei 5 de 25
+25.56 eu sou o processo 1 terminei 8 de 25
+24.19 eu sou o processo 0 terminei 6 de 25
+28.8 eu sou o processo 1 terminei 9 de 25
+27.68 eu sou o processo 0 terminei 7 de 25
+32.16 eu sou o processo 1 terminei 10 de 25
+34.09 eu sou o processo 0 terminei 8 de 25
+37.09 eu sou o processo 0 terminei 9 de 25
+41.89 eu sou o processo 1 terminei 11 de 25
+44.06 eu sou o processo 1 terminei 12 de 25
+42.19 eu sou o processo 0 terminei 10 de 25
+47.46 eu sou o processo 1 terminei 13 de 25
+46.6 eu sou o processo 0 terminei 11 de 25
+50.14 eu sou o processo 1 terminei 14 de 25
+49.56 eu sou o processo 0 terminei 12 de 25
+53.52 eu sou o processo 1 terminei 15 de 25
+56.42 eu sou o processo 1 terminei 16 de 25
+53.68 eu sou o processo 0 terminei 13 de 25
+59.29 eu sou o processo 1 terminei 17 de 25
+61.11 eu sou o processo 1 terminei 18 de 25
+63.68 eu sou o processo 1 terminei 19 de 25
+60.75 eu sou o processo 0 terminei 14 de 25
+66.79 eu sou o processo 1 terminei 20 de 25
+63.07 eu sou o processo 0 terminei 15 de 25
+66.71 eu sou o processo 0 terminei 16 de 25
+70.79 eu sou o processo 1 terminei 21 de 25
+69.07 eu sou o processo 0 terminei 17 de 25
+72.02 eu sou o processo 0 terminei 18 de 25
+76.22 eu sou o processo 1 terminei 22 de 25
+74.88 eu sou o processo 0 terminei 19 de 25
+78.84 eu sou o processo 1 terminei 23 de 25
+81.48 eu sou o processo 1 terminei 24 de 25
+79.21 eu sou o processo 0 terminei 20 de 25
+87.32 eu sou o processo 1 terminei 25 de 25
+84.23 eu sou o processo 0 terminei 21 de 25
+87.08 eu sou o processo 0 terminei 22 de 23
+89.59 eu sou o processo 0 terminei 23 de 23
+Execucao: 3---------------------------------------------------------------------------------
+Processo: 0 LOCAL GRASP = 90 Tempo = 89.59
+92.64 eu sou o processo 1 terminei 26 de 27
+GLOBAL GRASP = 90 Tempo = 92.98
+96.44 eu sou o processo 1 terminei 27 de 27
+Execucao: 3---------------------------------------------------------------------------------
+Processo: 1 LOCAL GRASP = 90 Tempo = 96.44
+2.32 eu sou o processo 0 terminei 1 de 25
+2.64 eu sou o processo 1 terminei 1 de 25
+5.14 eu sou o processo 1 terminei 2 de 25
+5.2 eu sou o processo 0 terminei 2 de 25
+7.48 eu sou o processo 0 terminei 3 de 25
+9.27 eu sou o processo 1 terminei 3 de 25
+10.48 eu sou o processo 0 terminei 4 de 25
+12.44 eu sou o processo 1 terminei 4 de 25
+14.56 eu sou o processo 1 terminei 5 de 25
+15.28 eu sou o processo 0 terminei 5 de 25
+21.21 eu sou o processo 0 terminei 6 de 25
+22.08 eu sou o processo 1 terminei 6 de 25
+26.65 eu sou o processo 1 terminei 7 de 25
+25.95 eu sou o processo 0 terminei 7 de 25
+29.12 eu sou o processo 1 terminei 8 de 25
+31.03 eu sou o processo 0 terminei 8 de 25
+33.38 eu sou o processo 1 terminei 9 de 25
+37.04 eu sou o processo 1 terminei 10 de 25
+38.53 eu sou o processo 0 terminei 9 de 25
+39.98 eu sou o processo 1 terminei 11 de 25
+40.61 eu sou o processo 0 terminei 10 de 25
+42.63 eu sou o processo 0 terminei 11 de 25
+43.41 eu sou o processo 1 terminei 12 de 25
+45.98 eu sou o processo 1 terminei 13 de 25
+48.58 eu sou o processo 0 terminei 12 de 25
+50.57 eu sou o processo 1 terminei 14 de 25
+51.34 eu sou o processo 0 terminei 13 de 25
+52.75 eu sou o processo 1 terminei 15 de 25
+56.63 eu sou o processo 0 terminei 14 de 25
+57.5 eu sou o processo 1 terminei 16 de 25
+62.31 eu sou o processo 0 terminei 15 de 25
+63.28 eu sou o processo 1 terminei 17 de 25
+64.72 eu sou o processo 0 terminei 16 de 25
+67.95 eu sou o processo 1 terminei 18 de 25
+70.33 eu sou o processo 1 terminei 19 de 25
+73.12 eu sou o processo 1 terminei 20 de 25
+74.6 eu sou o processo 0 terminei 17 de 25
+77.5 eu sou o processo 1 terminei 21 de 25
+79.21 eu sou o processo 0 terminei 18 de 25
+80.53 eu sou o processo 1 terminei 22 de 25
+85.72 eu sou o processo 1 terminei 23 de 25
+86.87 eu sou o processo 0 terminei 19 de 25
+88.8 eu sou o processo 1 terminei 24 de 25
+91.12 eu sou o processo 1 terminei 25 de 25
+92.04 eu sou o processo 0 terminei 20 de 25
+97.03 eu sou o processo 0 terminei 21 de 23
+100.45 eu sou o processo 0 terminei 22 de 23
+105.37 eu sou o processo 0 terminei 23 de 23
+Execucao: 4---------------------------------------------------------------------------------
+Processo: 0 LOCAL GRASP = 90 Tempo = 105.37
+101.31 eu sou o processo 1 terminei 26 de 27
+GLOBAL GRASP = 90 Tempo = 110.54
+108.96 eu sou o processo 1 terminei 27 de 27
+Execucao: 4---------------------------------------------------------------------------------
+Processo: 1 LOCAL GRASP = 90 Tempo = 108.96
+2.97 eu sou o processo 0 terminei 1 de 25
+4.67 eu sou o processo 0 terminei 2 de 25
+8.86 eu sou o processo 1 terminei 1 de 25
+8.77 eu sou o processo 0 terminei 3 de 25
+11.51 eu sou o processo 1 terminei 2 de 25
+12.74 eu sou o processo 0 terminei 4 de 25
+17.53 eu sou o processo 1 terminei 3 de 25
+17.35 eu sou o processo 0 terminei 5 de 25
+22.19 eu sou o processo 1 terminei 4 de 25
+22.55 eu sou o processo 0 terminei 6 de 25
+24.73 eu sou o processo 1 terminei 5 de 25
+27.03 eu sou o processo 1 terminei 6 de 25
+26.64 eu sou o processo 0 terminei 7 de 25
+28.75 eu sou o processo 0 terminei 8 de 25
+30.82 eu sou o processo 0 terminei 9 de 25
+34.82 eu sou o processo 1 terminei 7 de 25
+33.42 eu sou o processo 0 terminei 10 de 25
+37.65 eu sou o processo 1 terminei 8 de 25
+36.28 eu sou o processo 0 terminei 11 de 25
+38.86 eu sou o processo 0 terminei 12 de 25
+41.26 eu sou o processo 1 terminei 9 de 25
+43.18 eu sou o processo 1 terminei 10 de 25
+42.72 eu sou o processo 0 terminei 13 de 25
+46.24 eu sou o processo 1 terminei 11 de 25
+45.12 eu sou o processo 0 terminei 14 de 25
+50.94 eu sou o processo 1 terminei 12 de 25
+51.53 eu sou o processo 0 terminei 15 de 25
+57 eu sou o processo 1 terminei 13 de 25
+54.75 eu sou o processo 0 terminei 16 de 25
+60.03 eu sou o processo 0 terminei 17 de 25
+64.91 eu sou o processo 1 terminei 14 de 25
+63.68 eu sou o processo 0 terminei 18 de 25
+67.84 eu sou o processo 1 terminei 15 de 25
+72.08 eu sou o processo 1 terminei 16 de 25
+69.31 eu sou o processo 0 terminei 19 de 25
+74.98 eu sou o processo 1 terminei 17 de 25
+71.84 eu sou o processo 0 terminei 20 de 25
+76.95 eu sou o processo 1 terminei 18 de 25
+75.59 eu sou o processo 0 terminei 21 de 25
+80.72 eu sou o processo 1 terminei 19 de 25
+83.59 eu sou o processo 1 terminei 20 de 25
+81.95 eu sou o processo 0 terminei 22 de 25
+86.43 eu sou o processo 1 terminei 21 de 25
+84.36 eu sou o processo 0 terminei 23 de 25
+86.29 eu sou o processo 0 terminei 24 de 25
+90.05 eu sou o processo 1 terminei 22 de 25
+90.45 eu sou o processo 0 terminei 25 de 25
+99.08 eu sou o processo 1 terminei 23 de 25
+102.07 eu sou o processo 1 terminei 24 de 24
+Execucao: 5---------------------------------------------------------------------------------
+Processo: 1 LOCAL GRASP = 90 Tempo = 102.07
+97.91 eu sou o processo 0 terminei 26 de 26
+Execucao: 5---------------------------------------------------------------------------------
+Processo: 0 LOCAL GRASP = 90 Tempo = 97.91
+GLOBAL GRASP = 90 Tempo = 97.91
+3.07 eu sou o processo 0 terminei 1 de 25
+6.62 eu sou o processo 1 terminei 1 de 25
+5.58 eu sou o processo 0 terminei 2 de 25
+14.02 eu sou o processo 1 terminei 2 de 25
+12.24 eu sou o processo 0 terminei 3 de 25
+16.71 eu sou o processo 1 terminei 3 de 25
+16.27 eu sou o processo 0 terminei 4 de 25
+19.57 eu sou o processo 1 terminei 4 de 25
+19.22 eu sou o processo 0 terminei 5 de 25
+21.87 eu sou o processo 0 terminei 6 de 25
+25.98 eu sou o processo 1 terminei 5 de 25
+23.8 eu sou o processo 0 terminei 7 de 25
+30.58 eu sou o processo 1 terminei 6 de 25
+29.51 eu sou o processo 0 terminei 8 de 25
+32.38 eu sou o processo 0 terminei 9 de 25
+39.67 eu sou o processo 1 terminei 7 de 25
+36.24 eu sou o processo 0 terminei 10 de 25
+42.25 eu sou o processo 1 terminei 8 de 25
+39.15 eu sou o processo 0 terminei 11 de 25
+41.98 eu sou o processo 0 terminei 12 de 25
+46.88 eu sou o processo 1 terminei 9 de 25
+44.24 eu sou o processo 0 terminei 13 de 25
+46.54 eu sou o processo 0 terminei 14 de 25
+50.11 eu sou o processo 0 terminei 15 de 25
+55.64 eu sou o processo 1 terminei 10 de 25
+52.56 eu sou o processo 0 terminei 16 de 25
+58.09 eu sou o processo 1 terminei 11 de 25
+55.09 eu sou o processo 0 terminei 17 de 25
+58.45 eu sou o processo 0 terminei 18 de 25
+62.66 eu sou o processo 1 terminei 12 de 25
+60.69 eu sou o processo 0 terminei 19 de 25
+66.76 eu sou o processo 1 terminei 13 de 25
+66.06 eu sou o processo 0 terminei 20 de 25
+72.31 eu sou o processo 1 terminei 14 de 25
+69.04 eu sou o processo 0 terminei 21 de 25
+75.89 eu sou o processo 1 terminei 15 de 25
+74.44 eu sou o processo 0 terminei 22 de 25
+80.1 eu sou o processo 1 terminei 16 de 25
+78.35 eu sou o processo 0 terminei 23 de 25
+84.26 eu sou o processo 1 terminei 17 de 25
+80.45 eu sou o processo 0 terminei 24 de 25
+86.58 eu sou o processo 1 terminei 18 de 25
+86.45 eu sou o processo 0 terminei 25 de 25
+91.57 eu sou o processo 1 terminei 19 de 25
+94.79 eu sou o processo 1 terminei 20 de 22
+97.06 eu sou o processo 1 terminei 21 de 22
+100.14 eu sou o processo 1 terminei 22 de 22
+Execucao: 6---------------------------------------------------------------------------------
+Processo: 1 LOCAL GRASP = 90 Tempo = 100.14
+93.51 eu sou o processo 0 terminei 26 de 28
+2.5 eu sou o processo 1 terminei 1 de 25
+96.14 eu sou o processo 0 terminei 27 de 28
+4.78 eu sou o processo 1 terminei 2 de 25
+101.97 eu sou o processo 0 terminei 28 de 28
+Execucao: 6---------------------------------------------------------------------------------
+Processo: 0 LOCAL GRASP = 90 Tempo = 101.98
+GLOBAL GRASP = 90 Tempo = 101.98
+11.29 eu sou o processo 1 terminei 3 de 25
+2.2 eu sou o processo 0 terminei 1 de 25
+15.54 eu sou o processo 1 terminei 4 de 25
+6.3 eu sou o processo 0 terminei 2 de 25
+18.84 eu sou o processo 1 terminei 5 de 25
+8.39 eu sou o processo 0 terminei 3 de 25
+24.48 eu sou o processo 1 terminei 6 de 25
+14.59 eu sou o processo 0 terminei 4 de 25
+28.06 eu sou o processo 1 terminei 7 de 25
+18.01 eu sou o processo 0 terminei 5 de 25
+30.13 eu sou o processo 1 terminei 8 de 25
+33.03 eu sou o processo 1 terminei 9 de 25
+22.62 eu sou o processo 0 terminei 6 de 25
+35.66 eu sou o processo 1 terminei 10 de 25
+25.46 eu sou o processo 0 terminei 7 de 25
+28.14 eu sou o processo 0 terminei 8 de 25
+42.46 eu sou o processo 1 terminei 11 de 25
+31.58 eu sou o processo 0 terminei 9 de 25
+45.34 eu sou o processo 1 terminei 12 de 25
+34.79 eu sou o processo 0 terminei 10 de 25
+49.75 eu sou o processo 1 terminei 13 de 25
+51.56 eu sou o processo 1 terminei 14 de 25
+38.02 eu sou o processo 0 terminei 11 de 25
+54.33 eu sou o processo 1 terminei 15 de 25
+41.89 eu sou o processo 0 terminei 12 de 25
+56.82 eu sou o processo 1 terminei 16 de 25
+44.43 eu sou o processo 0 terminei 13 de 25
+60.01 eu sou o processo 1 terminei 17 de 25
+46.69 eu sou o processo 0 terminei 14 de 25
+62.47 eu sou o processo 1 terminei 18 de 25
+48.81 eu sou o processo 0 terminei 15 de 25
+51.39 eu sou o processo 0 terminei 16 de 25
+67.03 eu sou o processo 1 terminei 19 de 25
+71.44 eu sou o processo 1 terminei 20 de 25
+73.76 eu sou o processo 1 terminei 21 de 25
+62.96 eu sou o processo 0 terminei 17 de 25
+77.08 eu sou o processo 1 terminei 22 de 25
+79.4 eu sou o processo 1 terminei 23 de 25
+68.95 eu sou o processo 0 terminei 18 de 25
+81.77 eu sou o processo 1 terminei 24 de 25
+71.86 eu sou o processo 0 terminei 19 de 25
+84.38 eu sou o processo 1 terminei 25 de 25
+76.82 eu sou o processo 0 terminei 20 de 25
+84 eu sou o processo 0 terminei 21 de 23
+87.3 eu sou o processo 0 terminei 22 de 23
+90.73 eu sou o processo 0 terminei 23 de 23
+Execucao: 7---------------------------------------------------------------------------------
+Processo: 0 LOCAL GRASP = 90 Tempo = 90.73
+96.36 eu sou o processo 1 terminei 26 de 27
+GLOBAL GRASP = 90 Tempo = 94.18
+100.94 eu sou o processo 1 terminei 27 de 27
+Execucao: 7---------------------------------------------------------------------------------
+Processo: 1 LOCAL GRASP = 90 Tempo = 100.94
+2.38 eu sou o processo 0 terminei 1 de 25
+5.23 eu sou o processo 1 terminei 1 de 25
+7.95 eu sou o processo 1 terminei 2 de 25
+9.14 eu sou o processo 0 terminei 2 de 25
+10.81 eu sou o processo 1 terminei 3 de 25
+11.56 eu sou o processo 0 terminei 3 de 25
+13.63 eu sou o processo 1 terminei 4 de 25
+15.68 eu sou o processo 1 terminei 5 de 25
+18.26 eu sou o processo 0 terminei 4 de 25
+20.35 eu sou o processo 0 terminei 5 de 25
+20.55 eu sou o processo 1 terminei 6 de 25
+27.69 eu sou o processo 0 terminei 6 de 25
+29.31 eu sou o processo 1 terminei 7 de 25
+30.97 eu sou o processo 0 terminei 7 de 25
+32.9 eu sou o processo 0 terminei 8 de 25
+33.67 eu sou o processo 1 terminei 8 de 25
+35.98 eu sou o processo 1 terminei 9 de 25
+37.5 eu sou o processo 0 terminei 9 de 25
+38.24 eu sou o processo 1 terminei 10 de 25
+40.35 eu sou o processo 0 terminei 10 de 25
+44.45 eu sou o processo 1 terminei 11 de 25
+46.1 eu sou o processo 0 terminei 11 de 25
+46.67 eu sou o processo 1 terminei 12 de 25
+48.32 eu sou o processo 0 terminei 12 de 25
+52.81 eu sou o processo 0 terminei 13 de 25
+54.86 eu sou o processo 1 terminei 13 de 25
+55.47 eu sou o processo 0 terminei 14 de 25
+59.94 eu sou o processo 1 terminei 14 de 25
+60.58 eu sou o processo 0 terminei 15 de 25
+67.47 eu sou o processo 1 terminei 15 de 25
+67.68 eu sou o processo 0 terminei 16 de 25
+70.32 eu sou o processo 0 terminei 17 de 25
+70.39 eu sou o processo 1 terminei 16 de 25
+74.28 eu sou o processo 0 terminei 18 de 25
+74.51 eu sou o processo 1 terminei 17 de 25
+76.2 eu sou o processo 0 terminei 19 de 25
+79.15 eu sou o processo 0 terminei 20 de 25
+79.42 eu sou o processo 1 terminei 18 de 25
+81.2 eu sou o processo 0 terminei 21 de 25
+82.22 eu sou o processo 1 terminei 19 de 25
+85.09 eu sou o processo 0 terminei 22 de 25
+87.41 eu sou o processo 1 terminei 20 de 25
+89.89 eu sou o processo 0 terminei 23 de 25
+89.88 eu sou o processo 1 terminei 21 de 25
+92.22 eu sou o processo 1 terminei 22 de 25
+93.73 eu sou o processo 0 terminei 24 de 25
+97.55 eu sou o processo 0 terminei 25 de 25
+99.27 eu sou o processo 1 terminei 23 de 25
+103.22 eu sou o processo 1 terminei 24 de 24
+Execucao: 8---------------------------------------------------------------------------------
+Processo: 1 LOCAL GRASP = 90 Tempo = 103.22
+2.28 eu sou o processo 1 terminei 1 de 25
+106.28 eu sou o processo 0 terminei 26 de 26
+Execucao: 8---------------------------------------------------------------------------------
+Processo: 0 LOCAL GRASP = 90 Tempo = 106.28
+GLOBAL GRASP = 90 Tempo = 106.28
+6.45 eu sou o processo 1 terminei 2 de 25
+2.94 eu sou o processo 0 terminei 1 de 25
+10.58 eu sou o processo 1 terminei 3 de 25
+8.85 eu sou o processo 0 terminei 2 de 25
+16.3 eu sou o processo 1 terminei 4 de 25
+12.29 eu sou o processo 0 terminei 3 de 25
+19.53 eu sou o processo 1 terminei 5 de 25
+16.23 eu sou o processo 0 terminei 4 de 25
+22.72 eu sou o processo 1 terminei 6 de 25
+19.48 eu sou o processo 0 terminei 5 de 25
+25.63 eu sou o processo 1 terminei 7 de 25
+28.16 eu sou o processo 1 terminei 8 de 25
+27.02 eu sou o processo 0 terminei 6 de 25
+33.45 eu sou o processo 1 terminei 9 de 25
+35.98 eu sou o processo 1 terminei 10 de 25
+30.56 eu sou o processo 0 terminei 7 de 25
+38 eu sou o processo 1 terminei 11 de 25
+40.42 eu sou o processo 1 terminei 12 de 25
+33.92 eu sou o processo 0 terminei 8 de 25
+45.29 eu sou o processo 1 terminei 13 de 25
+39.34 eu sou o processo 0 terminei 9 de 25
+48.25 eu sou o processo 1 terminei 14 de 25
+41.97 eu sou o processo 0 terminei 10 de 25
+50.07 eu sou o processo 1 terminei 15 de 25
+44.53 eu sou o processo 0 terminei 11 de 25
+52.73 eu sou o processo 1 terminei 16 de 25
+46.97 eu sou o processo 0 terminei 12 de 25
+55.27 eu sou o processo 1 terminei 17 de 25
+49.77 eu sou o processo 0 terminei 13 de 25
+60.82 eu sou o processo 1 terminei 18 de 25
+55.28 eu sou o processo 0 terminei 14 de 25
+63.48 eu sou o processo 1 terminei 19 de 25
+57.8 eu sou o processo 0 terminei 15 de 25
+66.32 eu sou o processo 1 terminei 20 de 25
+60.61 eu sou o processo 0 terminei 16 de 25
+69.74 eu sou o processo 1 terminei 21 de 25
+62.61 eu sou o processo 0 terminei 17 de 25
+73.03 eu sou o processo 1 terminei 22 de 25
+68.07 eu sou o processo 0 terminei 18 de 25
+76.53 eu sou o processo 1 terminei 23 de 25
+72.17 eu sou o processo 0 terminei 19 de 25
+81.45 eu sou o processo 1 terminei 24 de 25
+76.5 eu sou o processo 0 terminei 20 de 25
+84.13 eu sou o processo 1 terminei 25 de 25
+81.27 eu sou o processo 0 terminei 21 de 25
+83.46 eu sou o processo 0 terminei 22 de 23
+86.33 eu sou o processo 0 terminei 23 de 23
+Execucao: 9---------------------------------------------------------------------------------
+Processo: 0 LOCAL GRASP = 90 Tempo = 86.33
+92.17 eu sou o processo 1 terminei 26 de 27
+94.98 eu sou o processo 1 terminei 27 de 27
+Execucao: 9---------------------------------------------------------------------------------
+Processo: 1 LOCAL GRASP = 90 Tempo = 94.98
+GLOBAL GRASP = 90 Tempo = 89.03
+1.39 eu sou o processo 1 terminei 1 de 25
+2.3 eu sou o processo 0 terminei 1 de 25
+3.32 eu sou o processo 1 terminei 2 de 25
+4.88 eu sou o processo 0 terminei 2 de 25
+7.02 eu sou o processo 0 terminei 3 de 25
+9.13 eu sou o processo 1 terminei 3 de 25
+9.87 eu sou o processo 0 terminei 4 de 25
+12.24 eu sou o processo 0 terminei 5 de 25
+14.52 eu sou o processo 0 terminei 6 de 25
+15 eu sou o processo 1 terminei 4 de 25
+17.27 eu sou o processo 1 terminei 5 de 25
+19.06 eu sou o processo 0 terminei 7 de 25
+19.57 eu sou o processo 1 terminei 6 de 25
+21.61 eu sou o processo 0 terminei 8 de 25
+22.02 eu sou o processo 1 terminei 7 de 25
+26.28 eu sou o processo 1 terminei 8 de 25
+26.37 eu sou o processo 0 terminei 9 de 25
+28.91 eu sou o processo 0 terminei 10 de 25
+31.87 eu sou o processo 1 terminei 9 de 25
+32.18 eu sou o processo 0 terminei 11 de 25
+37.95 eu sou o processo 0 terminei 12 de 25
+38.67 eu sou o processo 1 terminei 10 de 25
+42.36 eu sou o processo 0 terminei 13 de 25
+44.15 eu sou o processo 1 terminei 11 de 25
+46.05 eu sou o processo 1 terminei 12 de 25
+47.73 eu sou o processo 0 terminei 14 de 25
+50.74 eu sou o processo 1 terminei 13 de 25
+52.25 eu sou o processo 0 terminei 15 de 25
+52.77 eu sou o processo 1 terminei 14 de 25
+55.71 eu sou o processo 0 terminei 16 de 25
+55.64 eu sou o processo 1 terminei 15 de 25
+58.57 eu sou o processo 0 terminei 17 de 25
+61.4 eu sou o processo 0 terminei 18 de 25
+63.75 eu sou o processo 1 terminei 16 de 25
+64.74 eu sou o processo 0 terminei 19 de 25
+66.33 eu sou o processo 1 terminei 17 de 25
+68.63 eu sou o processo 1 terminei 18 de 25
+69.9 eu sou o processo 0 terminei 20 de 25
+70.83 eu sou o processo 1 terminei 19 de 25
+72.48 eu sou o processo 0 terminei 21 de 25
+73.4 eu sou o processo 1 terminei 20 de 25
+75.03 eu sou o processo 0 terminei 22 de 25
+76.05 eu sou o processo 1 terminei 21 de 25
+77.86 eu sou o processo 0 terminei 23 de 25
+80.35 eu sou o processo 0 terminei 24 de 25
+81.43 eu sou o processo 1 terminei 22 de 25
+82.85 eu sou o processo 0 terminei 25 de 25
+86.79 eu sou o processo 1 terminei 23 de 25
+88.8 eu sou o processo 1 terminei 24 de 24
+Execucao: 10---------------------------------------------------------------------------------
+Processo: 1 LOCAL GRASP = 90 Tempo = 88.8
+90.96 eu sou o processo 0 terminei 26 de 26
+Execucao: 10---------------------------------------------------------------------------------
+Processo: 0 LOCAL GRASP = 90 Tempo = 90.96
+GLOBAL GRASP = 90 Tempo = 90.96
